@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <nav className="flex min-h-[68px] items-center justify-between py-4">
+    <nav className="flex min-h-[68px] items-center justify-between px-4 py-4">
       <img src="/logo.svg" alt="logo" className="h-5" />
       <ul className="flex items-center gap-16">
         <li>

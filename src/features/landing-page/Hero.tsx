@@ -7,6 +7,7 @@ const Head = styled.div`
   justify-content: center;
   flex-direction: column;
   min-height: calc(100vh - 68px);
+  padding: 0 18px;
 `;
 
 function Hero() {
@@ -32,22 +33,22 @@ function Hero() {
       </p>
 
       <div className="flex items-center gap-4">
-        <button className="rounded-lg bg-primary-base px-14 py-3 text-lg text-tertiary-base">
+        <button className="rounded-lg bg-primary-base px-20 py-3 text-lg text-tertiary-base">
           Join us
         </button>
         <div className="flex flex-col text-tertiary-5">
           <p>
-            <span className="font-bold">+500</span> developer
+            <span className="font-bold">+500</span> business
           </p>
           <p>
-            <span className="font-bold">+200</span> business
+            <span className="font-bold">+200</span> developer
           </p>
         </div>
       </div>
       <img
         src="/public/circle-1.svg"
         alt="circle"
-        className=" absolute -right-16 bottom-8 h-96 translate-x-1/2 "
+        className=" absolute -right-16 bottom-8 h-96 translate-x-1/2 rotate-180"
       />
       <img
         src="/public/circle-2.svg"
