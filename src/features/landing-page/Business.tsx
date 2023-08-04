@@ -27,7 +27,6 @@ function Business() {
       </div>
       <div className="col-start-13 col-end-[24] h-72 overflow-hidden rounded-xl">
         <Image src="/business.jpg" />
-        {/* <img src="/business.jpg" alt="" className="h-full object-cover" /> */}
       </div>
       <div className="col-start-2 col-end-[24] flex items-center justify-between gap-4">
         <div className="rounded-xl border border-gray-4 bg-white p-4">
@@ -37,7 +36,7 @@ function Business() {
             </div>
             <p className="text-lg  text-gray-7">revenue rate</p>
           </div>
-          <p className="mb-4 text-5xl font-bold text-gray-9">+15%</p>
+          <p className="mb-4 text-5xl font-bold text-tertiary-7">+15%</p>
           <p className="text-lg text-gray-6">
             Boost revenue with SellSource's innovative solutions.
           </p>

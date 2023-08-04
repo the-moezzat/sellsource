@@ -1,4 +1,5 @@
 import Business from "../features/landing-page/Business";
+import Developer from "../features/landing-page/Developer";
 import Header from "../features/landing-page/Header";
 import Hero from "../features/landing-page/Hero";
 
@@ -8,6 +9,7 @@ function LandingPage() {
       <Header />
       <Hero />
       <Business />
+      <Developer />
     </div>
   );
 }
