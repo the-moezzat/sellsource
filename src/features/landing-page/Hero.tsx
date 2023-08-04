@@ -46,12 +46,12 @@ function Hero() {
         </div>
       </div>
       <img
-        src="/public/circle-1.svg"
+        src="/circle-1.svg"
         alt="circle"
         className=" absolute -right-16 bottom-8 h-96 translate-x-1/2 rotate-180"
       />
       <img
-        src="/public/circle-2.svg"
+        src="/circle-2.svg"
         alt="circle"
         className=" absolute -left-24 top-8 h-96 -translate-x-1/2 "
       />
