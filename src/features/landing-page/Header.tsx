@@ -1,29 +1,28 @@
 function Header() {
   return (
-    <div className="flex items-center justify-between py-4">
-      <img src="/logo.svg" alt="logo" className="h-6" />
-      <ul className="flex items-center gap-12">
+    <nav className="flex min-h-[68px] items-center justify-between py-4">
+      <img src="/logo.svg" alt="logo" className="h-5" />
+      <ul className="flex items-center gap-16">
         <li>
-          <a href="#business" className="text-lg text-gray-7">
+          <a href="#business" className="text-gray-7">
             Business
           </a>
         </li>
         <li>
-          <a href="#developer" className="text-lg  text-gray-7">
+          <a href="#developer" className=" text-gray-7">
             Developer
           </a>
         </li>
         <li>
-          <a href="#faq" className="text-lg  text-gray-7">
-            {" "}
-            FAQ{" "}
+          <a href="#faq" className=" text-gray-7">
+            FAQ
           </a>
         </li>
       </ul>
-      <button className=" rounded-lg bg-primary-base px-6 py-2 text-tertiary-base transition-all hover:bg-primary-5">
+      <button className=" rounded-lg bg-primary-base px-5 py-2 text-sm text-tertiary-base transition-all hover:bg-primary-5">
         Join us
       </button>
-    </div>
+    </nav>
   );
 }
 
