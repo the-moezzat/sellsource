@@ -1,3 +1,6 @@
+import { Input } from "../../ui/input";
+import JoinForm from "./Form";
+
 function JoinUs() {
   return (
     <div className=" bg-tertiary-9 p-16" id="join">
@@ -8,6 +11,8 @@ function JoinUs() {
         <h2 className="text-center text-5xl font-bold leading-normal text-tertiary-1">
           Don’t miss the opportunity to be part of sellsource
         </h2>
+        <JoinForm />
+        <Input />
       </div>
     </div>
   );

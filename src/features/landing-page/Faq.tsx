@@ -46,7 +46,7 @@ function Faq() {
         className="flex w-full flex-col gap-4"
       >
         {faqQuestions.map((question, i) => (
-          <AccordionItem value={`item-${i}`}>
+          <AccordionItem value={`item-${i}`} key={i}>
             <AccordionTrigger>{question.question}</AccordionTrigger>
             <AccordionContent>{question.answer}</AccordionContent>
           </AccordionItem>
