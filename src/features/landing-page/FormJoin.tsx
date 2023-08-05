@@ -44,13 +44,12 @@ export default function FormJoin() {
     resolver: zodResolver(FormSchema),
   });
 
-  const { mutate, data, isLoading, error } = useMutation(
+  const { mutate, data, isLoading } = useMutation(
     (data: z.infer<typeof FormSchema>) =>
-      axios.post("https://sellsource.co/api/join", data),
+      axios.post(import.meta.env.VITE_JOIN_URL, data),
   );
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
     mutate(data);
   }
 
@@ -61,9 +60,6 @@ export default function FormJoin() {
         message: "This email has been used before",
       });
   }, [data, form]);
-
-  console.log(data?.data);
-  console.log(error);
 
   return (
     <Form {...form}>
