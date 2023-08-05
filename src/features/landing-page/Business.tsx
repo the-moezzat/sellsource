@@ -11,18 +11,21 @@ const Image = styled.img`
   object-position: center;
 `;
 
+const Section = styled.section`
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 1rem;
+  padding: 3rem 1.25rem;
+`;
+
 function Business() {
   return (
-    <div
-      className="grid  grid-cols-[repeat(24,1fr)] gap-4 bg-[#F7F7F7] px-5 py-12"
-      id="business"
-    >
+    <Section className="bg-[#F7F7F7]" id="business">
       <div className="col-start-2 col-end-12">
-        <Subheading
-          text="Grow your business with us"
-          color="accent-5"
-          className=" mb-3"
-        />
+        <Subheading className=" mb-3 text-accent-6">
+          Grow your business with us
+        </Subheading>
+
         <h2 className="mb-4 text-4xl font-bold text-gray-8">
           Where businesses find best solutions
         </h2>
@@ -56,7 +59,7 @@ function Business() {
           text="Elevate business with high-quality software from SellSource."
         />
       </div>
-    </div>
+    </Section>
   );
 }
 

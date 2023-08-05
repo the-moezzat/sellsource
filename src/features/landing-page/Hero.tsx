@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 import { Button } from "../../ui/button";
 
-const Head = styled.div`
+const Head = styled.header`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: calc(100vh - 68px);
-  padding: 0 18px;
+  /* min-height: calc(100vh - 68px); */
+  padding: 96px 18px;
 `;
 
 function Hero() {
@@ -51,12 +51,12 @@ function Hero() {
       <img
         src="/circle-1.svg"
         alt="circle"
-        className=" absolute -right-16 bottom-8 h-96 translate-x-1/2 rotate-180"
+        className=" absolute -bottom-8 -right-16 -z-10 h-96 translate-x-1/2 rotate-180"
       />
       <img
         src="/circle-2.svg"
         alt="circle"
-        className=" absolute -left-24 top-8 h-96 -translate-x-1/2 "
+        className=" absolute -left-24 top-2 h-96 -translate-x-1/2 "
       />
     </Head>
   );

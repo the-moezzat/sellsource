@@ -1,17 +1,11 @@
 function Subheading({
-  text,
-  color,
+  children,
   className,
 }: {
-  text: string;
-  color: string;
+  children: React.ReactNode;
   className: string;
 }) {
-  return (
-    <p className={`uppercase tracking-widest text-${color} ${className}`}>
-      {text}
-    </p>
-  );
+  return <p className={`uppercase tracking-widest ${className}`}>{children}</p>;
 }
 
 export default Subheading;
