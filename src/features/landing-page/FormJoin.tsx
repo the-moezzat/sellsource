@@ -46,7 +46,7 @@ export default function FormJoin() {
 
   const { mutate, data, isLoading } = useMutation(
     (data: z.infer<typeof FormSchema>) =>
-      axios.post(import.meta.env.VITE_JOIN_URL, data),
+      axios.post(`${import.meta.env.VITE_JOIN_URL}/api/join`, data),
   );
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
