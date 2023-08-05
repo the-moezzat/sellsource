@@ -1,10 +1,14 @@
 import LandingPage from "./pages/LandingPage";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <div className="mx-auto max-w-[1480px] overflow-x-hidden">
-      <LandingPage />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="mx-auto max-w-[1480px] overflow-x-hidden">
+        <LandingPage />
+      </div>
+    </QueryClientProvider>
   );
 }
 

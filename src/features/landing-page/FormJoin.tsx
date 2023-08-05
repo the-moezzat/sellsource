@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import axios from "axios";
 
 import { Button } from "../../ui/button";
 import {
@@ -21,6 +22,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../ui/select";
+import { useMutation } from "react-query";
+import { CircleNotch } from "@phosphor-icons/react";
+import { useEffect } from "react";
 
 const FormSchema = z.object({
   firstName: z.string().min(2, {
@@ -30,7 +34,7 @@ const FormSchema = z.object({
     message: "last name must be at least 2 characters.",
   }),
   email: z.string().email("provide valid email"),
-  type: z.string({
+  role: z.string({
     required_error: "Please select an type.",
   }),
 });
@@ -40,9 +44,26 @@ export default function FormJoin() {
     resolver: zodResolver(FormSchema),
   });
 
+  const { mutate, data, isLoading, error } = useMutation(
+    (data: z.infer<typeof FormSchema>) =>
+      axios.post("https://sellsource.co/api/join", data),
+  );
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log(data);
+    mutate(data);
   }
+
+  useEffect(() => {
+    if (data?.data.code === 401)
+      form.setError("email", {
+        type: "validate",
+        message: "This email has been used before",
+      });
+  }, [data, form]);
+
+  console.log(data?.data);
+  console.log(error);
 
   return (
     <Form {...form}>
@@ -96,7 +117,7 @@ export default function FormJoin() {
 
         <FormField
           control={form.control}
-          name="type"
+          name="role"
           render={({ field }) => (
             <FormItem>
               <FormLabel className=" text-tertiary-3">
@@ -110,7 +131,7 @@ export default function FormJoin() {
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="buyer">Buyer</SelectItem>
-                  <SelectItem value="seller">Seller</SelectItem>
+                  <SelectItem value="developer">Seller</SelectItem>
                   <SelectItem value="both">both</SelectItem>
                 </SelectContent>
               </Select>
@@ -119,8 +140,22 @@ export default function FormJoin() {
           )}
         />
 
-        <Button size={"lg"} type="submit" className="mt-6 w-full">
-          Join for free
+        <Button
+          size={"lg"}
+          type="submit"
+          className="mt-6 flex w-full items-center gap-2"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <div className=" animate-spin">
+                <CircleNotch />
+              </div>{" "}
+              loading
+            </>
+          ) : (
+            "Join for free"
+          )}
         </Button>
       </form>
     </Form>
