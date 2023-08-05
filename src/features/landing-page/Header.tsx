@@ -1,3 +1,5 @@
+import { Button } from "../../ui/button";
+
 function Header() {
   return (
     <nav className="flex min-h-[68px] items-center justify-between px-4 py-4">
@@ -19,9 +21,11 @@ function Header() {
           </a>
         </li>
       </ul>
-      <button className=" rounded-lg bg-primary-base px-5 py-2 text-sm text-tertiary-base transition-all hover:bg-primary-5">
-        Join us
-      </button>
+      <a href="#join">
+        <Button size="sm" className="px-5">
+          Join us
+        </Button>
+      </a>
     </nav>
   );
 }

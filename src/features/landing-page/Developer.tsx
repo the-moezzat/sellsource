@@ -15,7 +15,7 @@ const Image = styled.img`
 
 function Developer() {
   return (
-    <div className="grid grid-cols-[repeat(24,1fr)] grid-rows-[auto,auto] gap-4 bg-accent-6 px-5 py-12">
+    <div className="grid grid-cols-[repeat(24,1fr)] grid-rows-[auto,auto] gap-4 bg-accent-6 px-5 py-12" id="developer">
       <div className="col-start-2 col-end-[13] row-span-full grid grid-cols-2 gap-4">
         <div className="flex flex-col items-start justify-between gap-4 rounded-2xl bg-accent-10 p-4">
           <p className="text-2xl font-medium text-accent-1 ">

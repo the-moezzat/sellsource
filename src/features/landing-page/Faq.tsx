@@ -2,7 +2,7 @@ import { CaretDown } from "@phosphor-icons/react";
 
 function Faq() {
   return (
-    <div className="px-20 py-16">
+    <div className="px-20 py-16" id="faq">
       <h2 className="mb-12 text-4xl font-bold text-gray-8">
         Frequently asked question (FAQ)
       </h2>

@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Button } from "../../ui/button";
 
 const Head = styled.div`
   position: relative;
@@ -33,9 +34,11 @@ function Hero() {
       </p>
 
       <div className="flex items-center gap-4">
-        <button className="rounded-lg bg-primary-base px-20 py-3 text-lg text-tertiary-base">
-          Join us
-        </button>
+        <a href="#join">
+          <Button size={"lg"} className="px-20 py-6 text-lg">
+            Join us
+          </Button>
+        </a>
         <div className="flex flex-col text-tertiary-5">
           <p>
             <span className="font-bold">+500</span> business
