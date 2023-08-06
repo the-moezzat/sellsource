@@ -22,7 +22,7 @@ function Developer() {
       className="grid grid-cols-[repeat(24,1fr)] grid-rows-[auto,auto] gap-4 bg-accent-6 px-5 py-12"
       id="developer"
     >
-      <div className="col-start-2 col-end-[13] row-span-full grid grid-cols-2 gap-4">
+      <div className="col-start-2 col-end-[13] row-span-full grid grid-cols-2 gap-4 max-lg:col-start-1">
         <DeveloperFeatureCard
           title="Simplify Sales Process"
           icon={<FastForward />}
@@ -46,7 +46,7 @@ function Developer() {
           text="Thrive in a supportive environment. SellSource empowers you."
         />
       </div>
-      <div className="col-start-13 col-end-[24]">
+      <div className="col-start-13 col-end-[24] max-lg:col-end-[25]">
         <Subheading className=" mb-2 text-accent-2">For developer</Subheading>
         <h2 className="mb-4 text-4xl font-bold text-accent-10">
           Where Developer Build for better world
@@ -59,7 +59,7 @@ function Developer() {
           <Button className="">Join now for free</Button>
         </a>
       </div>
-      <div className="col-start-13 col-end-[24] h-64 overflow-hidden rounded-xl">
+      <div className="col-start-13 col-end-[24] h-64 overflow-hidden rounded-xl max-lg:col-end-[25]">
         <Image src="/developer.jpg" />
       </div>
     </div>

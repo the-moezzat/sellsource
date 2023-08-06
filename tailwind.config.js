@@ -22,6 +22,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        lg: "1180px",
+      },
       colors: {
         primary: {
           base: "#00ffa4",
