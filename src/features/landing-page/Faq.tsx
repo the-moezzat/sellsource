@@ -36,7 +36,7 @@ const faqQuestions = [
 function Faq() {
   return (
     <div className="px-20 py-16 max-lg:px-4" id="faq">
-      <h2 className="mb-12 text-4xl font-bold text-gray-8 max-lg:mb-6 max-lg:text-2xl max-lg:text-3xl">
+      <h2 className="mb-12 text-4xl font-bold text-gray-8 max-lg:mb-6 max-lg:text-3xl max-sm:text-2xl max-[450px]:text-lg">
         Frequently asked question (FAQ)
       </h2>
 
