@@ -35,8 +35,8 @@ const faqQuestions = [
 
 function Faq() {
   return (
-    <div className="px-20 py-16" id="faq">
-      <h2 className="mb-12 text-4xl font-bold text-gray-8">
+    <div className="px-20 py-16 max-lg:px-4" id="faq">
+      <h2 className="mb-12 text-4xl font-bold text-gray-8 max-lg:mb-6 max-lg:text-2xl max-lg:text-3xl">
         Frequently asked question (FAQ)
       </h2>
 
@@ -47,7 +47,9 @@ function Faq() {
       >
         {faqQuestions.map((question, i) => (
           <AccordionItem value={`item-${i}`} key={i}>
-            <AccordionTrigger>{question.question}</AccordionTrigger>
+            <AccordionTrigger className="max-lg:text-lg max-sm:text-left max-sm:text-base">
+              {question.question}
+            </AccordionTrigger>
             <AccordionContent>{question.answer}</AccordionContent>
           </AccordionItem>
         ))}
