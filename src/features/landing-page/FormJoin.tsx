@@ -65,9 +65,9 @@ export default function FormJoin() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex w-4/6 flex-col gap-4"
+        className="flex flex-col gap-4 max-md:gap-2"
       >
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 max-md:gap-2">
           <FormField
             control={form.control}
             name="firstName"

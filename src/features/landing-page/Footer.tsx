@@ -1,8 +1,20 @@
 import { FacebookLogo, DiscordLogo } from "@phosphor-icons/react";
+import styled from "styled-components";
+
+const Section = styled.footer`
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 1rem;
+  padding: 3rem 1.25rem;
+
+  @media (max-width: 1180px) {
+    gap: 0.5rem;
+  }
+`;
 
 function Footer() {
   return (
-    <footer className="grid grid-cols-[repeat(24,1fr)] gap-4 p-4 pt-14">
+    <Section>
       <div className="col-start-2 col-end-9 max-lg:col-start-1 max-md:col-end-12 max-[500px]:col-span-full">
         <img src="/logo.svg" alt="logo" className="mb-4 h-6" />
         <p className="mb-6 text-lg text-gray-6 max-md:text-sm max-sm:mb-3">
@@ -49,7 +61,7 @@ function Footer() {
           <p className="text-sm text-gray-6 max-sm:text-xs">
             © 2023 sellsource.co All rights reserved.
           </p>
-          <ul className="flex items-center gap-8">
+          <ul className="flex items-center gap-8 max-md:justify-between max-md:gap-2">
             <li className="text-sm text-gray-6 max-sm:text-xs">
               Terms of Service
             </li>
@@ -60,7 +72,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-    </footer>
+    </Section>
   );
 }
 
