@@ -64,6 +64,7 @@ function Hero() {
         alt="circle"
         className=" absolute -left-24 top-2 h-96 -translate-x-1/2 max-md:h-72 "
       />
+      {/* <div className="absolute left-0 top-1/2 -z-50 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-t from-[#2af598] to-[#009efd] blur-[96px]"></div> */}
     </Head>
   );
 }

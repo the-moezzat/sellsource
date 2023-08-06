@@ -12,8 +12,8 @@ function Header({
     <nav
       className={`${
         isSticky
-          ? "sticky border-b border-gray-6/30 bg-white/30 px-4 py-2 shadow-sm backdrop-blur-md"
-          : "relative px-4 py-4"
+          ? "sticky border-b border-gray-6/30 bg-white/30 px-4 py-3 shadow-sm backdrop-blur-md"
+          : "bg-transparent relative px-4 py-4"
       } top-0 z-50 flex items-center justify-between  `}
     >
       <img src="/logo.svg" alt="logo" className="h-5" />

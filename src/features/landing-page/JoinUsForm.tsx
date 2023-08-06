@@ -10,7 +10,6 @@ function JoinUs() {
         <h2 className="mb-6 text-center text-4xl font-bold leading-normal text-tertiary-1 max-lg:text-3xl max-md:text-2xl max-sm:text-xl">
           Don’t miss the opportunity to be part of sellsource
         </h2>
-
         <FormJoin />
       </div>
     </div>
