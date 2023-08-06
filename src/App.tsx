@@ -5,7 +5,7 @@ function App() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="mx-auto max-w-[1480px] overflow-x-hidden">
+      <div className="relative mx-auto max-w-[1480px]">
         <LandingPage />
       </div>
     </QueryClientProvider>

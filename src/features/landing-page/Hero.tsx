@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Button } from "../../ui/button";
+import { memo } from "react";
 
 const Head = styled.header`
   position: relative;
@@ -9,6 +10,7 @@ const Head = styled.header`
   flex-direction: column;
   /* min-height: calc(100vh - 68px); */
   padding: 96px 18px;
+  overflow: hidden;
 `;
 
 function Hero() {
@@ -62,4 +64,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default memo(Hero);
